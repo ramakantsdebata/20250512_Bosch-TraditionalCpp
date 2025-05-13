@@ -1,9 +1,11 @@
 #include <iostream>
 using namespace std;
 
+
+#define SIZE 100000
 int main()
 {
-	cout << "Hi there" << endl;
+	int res = 10 + 100000;
+	cout << res << endl;
 	return 0;
 }
-
