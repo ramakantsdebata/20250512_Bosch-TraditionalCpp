@@ -5,3 +5,6 @@
     * Create the assembly file - `cl /Fa 00_test.cpp`
     * create the object file - `cl .c 00_test.cpp`
 
+---
+## Operational
+* [Training Feedback](https://forms.gle/JALsiQ7qZaUzNrPKA)
