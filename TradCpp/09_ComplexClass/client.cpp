@@ -56,11 +56,18 @@ int main()
 	cout << "C9 --> " << c9.get_str() << endl;
 
 	Complex c10;
+	cout << "C9 --> " << c9.get_str() << endl;
 	cout << "##################" << endl;
 	c10 = ++c9;	// c9.operator++()
 	cout << "##################" << endl;
+	cout << "C9 --> " << c9.get_str() << endl;
 	cout << "C10 --> " << c10.get_str() << endl;
-	//c10 = c9++;	// c9.operator++(int)
+
+	cout << "---------------" << endl;
+	c10 = c9++;	// c9.operator++(int)
+	cout << "C9 --> " << c9.get_str() << endl;
+	cout << "C10 --> " << c10.get_str() << endl;
+	cout << "---------------" << endl;
 
 
 	//int a;
@@ -72,6 +79,24 @@ int main()
 	//int e(10);
 
 
-	cout << "End of fucntion... Returning now!" << endl;
+	//int i = 10;
+	//int j;
+	//j = i++;
+
+	cout << "#######################################" << endl;
+	c9 = c10 = c2;
+	//c9.operator=(c10.operator=(c2))
+	cout << "C10 --> " << c10.get_str() << endl;
+
+	cout << "------------------------" << endl;
+	//cout << c10 << endl;
+
+	cout << "C2 --> " << c2.get_str() << endl;
+	//c10 = c2 + 10;
+	c10 = 10 + c2; // operator+(int val, const Complex& obj)
+	//c10.operator=(c2.operator+(10))
+	cout << "C10 --> " << c10.get_str() << endl;
+
+	cout << "End of function... Returning now!" << endl;
 	return 0;
 }

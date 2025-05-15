@@ -22,7 +22,7 @@ Complex::Complex(const Complex& obj)
 {
 	cout << "copy ctor" << endl;
 	mReal = obj.mReal;
-	mImag = obj.mImag + 1;	
+	mImag = obj.mImag;	
 }
 
 void Complex::setReal(int val)
@@ -56,6 +56,7 @@ string Complex::get_str()
 
 Complex Complex::operator+(const Complex& obj)
 {
+	cout << "operator+() called" << endl;
 	Complex retData;
 	retData.mReal = this->mReal + obj.mReal;
 	retData.mImag = this->mImag + obj.mImag;
@@ -66,14 +67,36 @@ Complex Complex::operator+(const Complex& obj)
 	return retData;
 }
 
-Complex Complex::operator++()
+Complex& Complex::operator++() // Pre-increment operator
 {
 	mReal++;
 	return *this;
 }
 
-int i = 10;
-int& ref = i;
+Complex Complex::operator++(int) // Post-increment operator
+{
+	Complex temp(*this);
+	mReal++;
+	return temp;
+}
+
+const Complex& Complex::operator=(const Complex& obj)
+{
+	cout << "operator=() called" << endl;
+	mReal = obj.mReal;
+	mImag = obj.mImag;
+
+	return *this;
+}
+
+Complex operator+(int val, const Complex& obj)
+{
+	Complex res(obj);
+	//res.setReal(res.getReal() + val);
+	res.mReal += val;
+	return res;
+}
+
 
 Complex::~Complex()
 {

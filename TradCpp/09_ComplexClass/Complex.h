@@ -21,10 +21,16 @@ public:
 
 	// Operator Overloading
 	Complex operator+(const Complex& obj);
-	Complex operator++();
-	//operator++(int);
+	Complex& operator++();
+	Complex operator++(int);
+	const Complex& operator=(const Complex& obj);
 
+	friend Complex operator+(int val, const Complex& obj);
+	
 	~Complex();
 };
+
+Complex operator+(int val, const Complex& obj);
+
 
 #endif	//COMPLEX_H
