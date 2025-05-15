@@ -25,7 +25,7 @@ int main()
 
 	Complex c5;
 
-	c5 = c2;
+	c5 = c2;  // c5.operator=(c2)
 	
 	cout << "C5 --> " << c5.get_str() << endl;
 	Complex& c6 = c5;
@@ -35,8 +35,7 @@ int main()
 	else
 		cout << "Different" << endl;
 
-
-	Complex c7 = c2;	// copy ctor
+	Complex c7 = c2;	// copy ctor   || Complex(const Complex& c2)
 
 	Complex c8(c2);		// copy ctor
 
@@ -46,6 +45,33 @@ int main()
 
 	int j = 10;	// initialising j with the value 10
 
+	cout << "-----------------" << endl;
 
+	Complex c9 = c2 + c3;
+	//c2 + c3;  -->  c2.operator+(c3)
+	//c2.operator+(c3) --> res
+
+	// Complex c9 = res;
+
+	cout << "C9 --> " << c9.get_str() << endl;
+
+	Complex c10;
+	cout << "##################" << endl;
+	c10 = ++c9;	// c9.operator++()
+	cout << "##################" << endl;
+	cout << "C10 --> " << c10.get_str() << endl;
+	//c10 = c9++;	// c9.operator++(int)
+
+
+	//int a;
+	//a = 10;
+	//int b = 20;
+	//int c = a;
+
+	//int d(a);
+	//int e(10);
+
+
+	cout << "End of fucntion... Returning now!" << endl;
 	return 0;
 }
