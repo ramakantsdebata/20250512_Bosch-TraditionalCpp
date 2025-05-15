@@ -2,6 +2,7 @@
 #define COMPLEX_H
 
 #include <string>
+#include<iostream>
 
 class Complex
 {
@@ -26,11 +27,12 @@ public:
 	const Complex& operator=(const Complex& obj);
 
 	friend Complex operator+(int val, const Complex& obj);
-	
+	friend std::ostream& operator<<(std::ostream& out, const Complex& obj);
+
 	~Complex();
 };
 
 Complex operator+(int val, const Complex& obj);
-
+std::ostream& operator<<(std::ostream& out, const Complex& obj);
 
 #endif	//COMPLEX_H

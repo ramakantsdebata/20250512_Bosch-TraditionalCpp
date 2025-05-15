@@ -97,6 +97,11 @@ Complex operator+(int val, const Complex& obj)
 	return res;
 }
 
+std::ostream& operator<<(std::ostream& out, const Complex& obj)
+{
+	out << "Complex [" << obj.mReal << " + i" << obj.mImag << "]";
+	return out;
+}
 
 Complex::~Complex()
 {

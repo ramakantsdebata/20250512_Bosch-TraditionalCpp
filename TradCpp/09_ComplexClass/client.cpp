@@ -89,13 +89,17 @@ int main()
 	cout << "C10 --> " << c10.get_str() << endl;
 
 	cout << "------------------------" << endl;
-	//cout << c10 << endl;
-
 	cout << "C2 --> " << c2.get_str() << endl;
-	//c10 = c2 + 10;
+	c10 = c2 + 10;
 	c10 = 10 + c2; // operator+(int val, const Complex& obj)
-	//c10.operator=(c2.operator+(10))
+	//c10.operator=(c2.operator+(10))  --> c10.operator=(c2.operator+(Complex(10)))
 	cout << "C10 --> " << c10.get_str() << endl;
+
+	cout << "#######################################" << endl;
+	cout << c10;								// operator<<(cout, c10);
+	cout << "C10 --> " << c10 << endl;			// operator<<(operator<<(operator<<(cout, "C10 --> "), c10), endl)
+
+
 
 	cout << "End of function... Returning now!" << endl;
 	return 0;
