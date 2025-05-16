@@ -8,3 +8,4 @@
 ---
 ## Operational
 * [Training Feedback](https://forms.gle/JALsiQ7qZaUzNrPKA)
+* [Post training test](https://forms.gle/p8RNtLjzs7jtQmGV8)
