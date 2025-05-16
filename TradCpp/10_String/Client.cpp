@@ -16,9 +16,18 @@ int main()
 
 	//-------------------------------------
 
-	MyString s2("Data");
-	MyString s3 = s1 + s2;
-	cout << "String --> " << s3 << endl;
+	MyString s3("Data");
+	MyString s4 = s1 + s3;
+	cout << "String --> " << s4 << endl;
+
+	MyString s5(s4);
+
+	cout << s5 << endl;
+
+	cout << "------------------" << endl;
+	cout << s4 << endl;
+	s4 = s2;
+	cout << s4 << endl;
 
 	return 0;
 }
