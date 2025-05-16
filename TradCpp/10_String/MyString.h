@@ -5,18 +5,20 @@
 
 class MyString
 {
-	char* m_ptr;
-	int m_len;
+	mutable char* m_ptr;
+	mutable int m_len;
 	MyString(char* ptr, int len);
-	char* AllocateStr(int, const char*);
+	char* AllocateStr(int, const char*) const;
 
 public:
 	MyString();
 	MyString(const char* str);
 	MyString(const MyString&);
-	const char* get_str();
+	const char* get_str() const;
 	int length();
 	MyString operator+(const MyString& obj);
+	const MyString& operator=(const MyString& obj) const;
+
 	~MyString();
 
 	friend std::ostream& operator<<(std::ostream& out, const MyString& obj);

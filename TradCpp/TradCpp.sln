@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_ComplexClass", "09_Compl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_String", "10_String\10_String.vcxproj", "{99AA4CE7-FC82-4FE6-B140-0AFC9F8A73FC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_Exceptions", "11_Exceptions\11_Exceptions.vcxproj", "{3D74242C-DDB8-4FB6-9225-CAB339E514ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{99AA4CE7-FC82-4FE6-B140-0AFC9F8A73FC}.Release|x64.Build.0 = Release|x64
 		{99AA4CE7-FC82-4FE6-B140-0AFC9F8A73FC}.Release|x86.ActiveCfg = Release|Win32
 		{99AA4CE7-FC82-4FE6-B140-0AFC9F8A73FC}.Release|x86.Build.0 = Release|Win32
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Debug|x64.ActiveCfg = Debug|x64
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Debug|x64.Build.0 = Debug|x64
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Debug|x86.Build.0 = Debug|Win32
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Release|x64.ActiveCfg = Release|x64
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Release|x64.Build.0 = Release|x64
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Release|x86.ActiveCfg = Release|Win32
+		{3D74242C-DDB8-4FB6-9225-CAB339E514ED}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

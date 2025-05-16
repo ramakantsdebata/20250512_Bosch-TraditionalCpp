@@ -3,6 +3,15 @@
 #include "MyString.h"
 using namespace std;
 
+void DisplayString(const MyString& obj)
+{
+	cout << obj << endl;
+	//cout << obj.get_str() << endl;
+	MyString sTemp("Temporary data");
+	cout << sTemp << endl;
+
+	int x = 10;
+}
 
 int main()
 {
@@ -25,9 +34,26 @@ int main()
 	cout << s5 << endl;
 
 	cout << "------------------" << endl;
-	cout << s4 << endl;
-	s4 = s2;
-	cout << s4 << endl;
+	cout << s2 << endl;
+	s2 = s4;
+	cout << s2 << endl;
+
+
+	DisplayString(s4);
+
+	const MyString s6("Constant Data");
+	DisplayString(s6);
+
+
+	//cout << s6.get_str();
+	//cout.operator<<(s6.get_str())
+	s6.get_str();
+
+	{
+		MyString s7("Scoped object");
+	}
+
+	cout << "End of function" << endl;
 
 	return 0;
 }

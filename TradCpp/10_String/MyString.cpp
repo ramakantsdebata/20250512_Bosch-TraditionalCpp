@@ -27,15 +27,24 @@ MyString::MyString(const MyString& obj)
 	m_ptr = AllocateStr(m_len, obj.m_ptr);
 }
 
-char* MyString::AllocateStr(int len, const char* data)
+char* MyString::AllocateStr(int len, const char* data) const
 {
 	char* ptr = new char[len + 1];
 	strcpy(ptr, data);
 	return ptr;
 }
 
-const char* MyString::get_str()
+const char* MyString::get_str() const
 {
+	// this --> (MyString*)
+	// MyString* this = &obj (const)
+
+	//int i = 10;
+	//const int* ptr = &i;
+
+	//const int j = 10;
+	//int* ptr2 = &j;
+
 	return m_ptr;
 }
 
@@ -62,6 +71,15 @@ MyString MyString::operator+(const MyString& obj)
 	temp = NULL;
 
 	return res2;
+}
+
+const MyString& MyString::operator=(const MyString& obj) const
+{
+	delete[] m_ptr;
+	m_len = obj.m_len;
+	m_ptr = AllocateStr(m_len, obj.m_ptr);
+
+	return *this;
 }
 
 MyString::~MyString()
